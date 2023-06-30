@@ -1,0 +1,15 @@
+services:
+  mongo:
+    image: mongo
+    ports:
+      - 27017:27017
+    volumes:
+      - mongo-db-v1:/data/db
+    # environment:
+    #   - MONGO_INITDB_ROOT_USERNAME=/run/secrets/mongo-root-user-file
+    #   - MONGO_INITDB_ROOT_PASSWORD=/run/secrets/mongo-root-password-file
+volumes:
+  mongo-db-v1:
+    external: true
+
+    

@@ -15,18 +15,19 @@ RUN npm ci
 COPY . /app
 
 ENV CI=true
-ENV PORT=3000
+# ENV PORT=3000
 
-CMD [ "npm", "start" ]
+# CMD [ "npm", "start" ]
 
+##  build the front-end
 FROM development AS build
 
 RUN npm run build
 
 
-FROM development AS dev-envs
+# FROM development AS dev-envs
 
-CMD [ "npm", "start" ]
+# CMD [ "npm", "start" ]
 
 # 2. For Nginx setup
 FROM nginx:alpine
