@@ -1,5 +1,5 @@
-# dockerized-frontend application (ReactJS)
-This is a dockerized ReactJS application. It is a simple application that hello word message.
+# dockerize-frontend application (ReactJS)
+This is a dockerize ReactJS application. It is a simple application that hello word message.
 
 the propose of this application is to show how to dockerize a ReactJS application in nginx server.
 
