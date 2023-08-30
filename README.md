@@ -11,3 +11,6 @@ docker compose up -d
 ```
 docker compose down
 ```
+
+useful links to learn more about docker compose:
+ - https://docs.docker.com/get-started/08_using_compose/
