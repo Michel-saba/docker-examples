@@ -15,9 +15,13 @@ docker run --name back-end-app -p 3000:3000 \
 -u "node" \
 ```
 - check the logs:
+`````
+ docker logs <container_id>
+`````
 
+- connect to the container:
 ``````
-docker exec -it back-end-app /bin/bash
+ docker exec -it back-end-app /bin/bash
 ``````
 useful links:
 - https://nodejs.org/fr/docs/guides/nodejs-docker-webapp
