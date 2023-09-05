@@ -1,0 +1,38 @@
+version: '3.1'
+services:
+# front-end service
+     frontend:
+       container_name: front-end-app
+       restart: always
+       build: ../front-end
+       ports:
+            - "80:80"
+# back-end service
+     server:
+        container_name: app
+        restart: always
+        build: ../back-end
+        ports:
+            - "3000:3000"
+        environment:
+           DATABASE_HOST: mongodb://mongo:27017
+        networks:
+           - back-database
+#database service
+     mongo:
+      image: mongo
+      ports:
+       - 27017:27017
+      volumes:
+       - mongo-db-v1:/data/db
+      networks:
+       - back-database
+volumes:
+   mongo-db-v1:
+
+networks:
+  back-database:
+
+
+
+
