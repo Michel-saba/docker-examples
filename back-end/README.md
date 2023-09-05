@@ -12,7 +12,7 @@ docker build  -t node-web-app .
 docker run --name back-end-app -p 3000:3000 \
 -d node-web-app  \
 -e "NODE_ENV=production" \
--u "node" \
+-e "DATABASE_HOST=mongodb://my-database:27017" \
 ```
 - check the logs:
 `````

@@ -8,7 +8,7 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 # set env variables
 ENV NPM_CONFIG_PREFIX=/home/node/.npm-global
-ENV NODE_ENV=production
+
 ENV PORT=3000
 
 RUN npm install
